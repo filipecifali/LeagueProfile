@@ -7,36 +7,44 @@
 
 </head>
 <body>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <h1>Hello, welcome to {{ data[0]['gravelordnito']['name'] }} Profile.</h1>
-    <div class="col-md-3" style="width: 30%;">
-        <h2>My Recent Games</h2>
-        {%- for games in data[3]['games'] %}
-            <br>GameID: {{ games['gameId'] }} Team: {{ games['teamId'] }}
-        {%- endfor %}
-    </div>
-    <div class="col-md-3" style="width: 30%;">
-        <h2>My Masteries</h2>
-        {%- for item in data[1]['537147']['pages'] %}
-            {%- if item['current'] %}
-                    <h4>Last used masteries: {{ item['name'] }}</h4>
-                        {%- for masteries in item['masteries'] %}
-                            <br>Masterie: {{ masteries['id'] }} Level: {{ masteries['rank'] }}
-                        {%- endfor %}
-                {%- endif %}
-        {%- endfor %}
-    </div>
-    <div class="col-md-3" style="width: 30%;">
-        <h2>My Runes</h2>
-        {%- for item in data[2]['537147']['pages'] %}
-            {%- if item['current'] %}
-                <h4>Last used runes: {{ item['name'] }}</h4>
-                {%- for runes in item['slots'] %}
-                    <br>Runes: {{ runes['runeId'] }} Slot: {{ runes['runeSlotId'] }}
+    <script type="javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+    <script type="javascript" src="/static/js/bootstrap.min.js"></script>
+    <div class="container">
+        <h1>Hello, welcome to {{ data[0]['gravelordnito']['name'] }} Profile.</h1>
+        <div class="col-md-4">
+            <div style="background-color: #ddd; padding: 30px;">
+                <h2>My Recent Games</h2>
+                {%- for games in data[3]['games'] %}
+                    <br>GameID: {{ games['gameId'] }} Team: {{ games['teamId'] }}
                 {%- endfor %}
-            {%- endif %}
-        {%- endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style="background-color: #ddd; padding: 30px;">
+                <h2>My Masteries</h2>
+                {%- for item in data[1]['537147']['pages'] %}
+                    {%- if item['current'] %}
+                    <h4>Last used masteries: {{ item['name'] }}</h4>
+                    {%- for masteries in item['masteries'] %}
+                        <br>Masterie: {{ masteries['id'] }} Level: {{ masteries['rank'] }}
+                    {%- endfor %}
+                {%- endif %}
+            {%- endfor %}
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div style="background-color: #ddd; padding: 30px;">
+                <h2>My Runes</h2>
+                {%- for item in data[2]['537147']['pages'] %}
+                    {%- if item['current'] %}
+                        <h4>Last used runes: {{ item['name'] }}</h4>
+                        {%- for runes in item['slots'] %}
+                            <br>Runes: {{ runes['runeId'] }} Slot: {{ runes['runeSlotId'] }}
+                        {%- endfor %}
+                    {%- endif %}
+                {%- endfor %}
+            </div>
+        </div>
     </div>
 </body>
 </html>
