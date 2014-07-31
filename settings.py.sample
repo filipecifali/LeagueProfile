@@ -1,0 +1,20 @@
+__author__ = 'filipe'
+
+CACHE_DIR = 'cache'
+SUMMONER_NAME = '<summoner name>'
+API_KEY = '<API KEY>'
+BACKUP_KEYS = ['<Rate limits>',
+               '<May bother you',
+               'Sometime']
+DEFAULT_REGION='br'
+REGINAL_ENDPOINT ={ 'BR':'br.api.pvp.net',
+                    'EUNE':'eune.api.pvp.net',
+                    'EUW':'euw.api.pvp.net',
+                    'KR':'kr.api.pvp.net',
+                    'LAS':'las.api.pvp.net',
+                    'LAN':'lan.api.pvp.net',
+                    'NA':'na.api.pvp.net',
+                    'OCE':'oce.api.pvp.net',
+                    'TR':'tr.api.pvp.net',
+                    'RU':'ru.api.pvp.net',
+                    'Global':'global.api.pvp.net'}

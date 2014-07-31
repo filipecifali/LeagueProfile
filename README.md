@@ -1,4 +1,4 @@
 LeagueProfile
 =============
 
-TL;DR;
+Just a sample Flask using Riot API for myself :)
