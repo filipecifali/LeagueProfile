@@ -1,4 +1,66 @@
+# -*- coding: utf-8 -*-
 __author__ = 'filipe'
+
+# Strings!
+nome = 'Filipe'
+sobrenome = 'Cifali'
+
+print ' '.join([nome, sobrenome]) # 'Filipe Cifali'
+
+# Inteiros!1
+
+print 10 + 2 # 12
+print 2 * 3 # 6
+print 10 / 2 + 10 * 2 # 25
+
+# Listas? Listas são mutáveis, logo, podem ser alteradas e adicionados dados e até mais listas dentro de listas!
+
+nome_completo = ['Filipe', 'Cifali']
+print nome_completo[0], nome_completo[1]
+nome_completo.append('Stangler')
+print nome_completo
+# Indices de acesso
+
+var = 'abcde'
+print var[:-1] # abcd
+print var[:-2] # abc
+print var[2:3] # c
+print var[2:-1] # cd
+
+# Tuplas?! Tuplas são imutáveis, elas como propósito
+#  armazenar dados que não são alterados
+
+sequencia_numerica = (11,20,25)
+
+if 11 in sequencia_numerica:
+    print "11 existe na sequencia!"
+
+
+# Dicionarios??? São um conjunto de dados não
+# ordenados definidos por chave => valor
+
+dados = {'nome':'Filipe', 'setor':'infra', 'proglang': ('Python', 'PHP', 'Perl')}
+print dados['nome']
+
+if 'Python' in dados['proglang']:
+    print "Dicts podem conter listas e tuplas dentro dos valores"
+
+for k, v in dados.iteritems():
+    print k, v
+
+for k in dados.iterkeys():
+    print k
+
+for v in dados.itervalues():
+    print v
+
+
+# Funções!
+
+def soma(a, b):
+    return a + b
+
+print soma(10, 20) # 30
 
 
 class Sample():
@@ -17,6 +79,7 @@ print p2.name, p2.surname
 
 
 class Parent(object):
+    # new-style object
     def implicit(self):
         print "%s implicit()" % self.__class__.__name__
 
@@ -28,8 +91,8 @@ class Child(Parent):
 pai = Parent()
 filho = Child()
 
-print pai.implicit()
-print filho.implicit()
+pai.implicit()
+filho.implicit()
 
 variavel = 'Filipe'
 
